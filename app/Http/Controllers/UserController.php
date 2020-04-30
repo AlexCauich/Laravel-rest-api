@@ -14,7 +14,8 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 use Tymon\JWTAuth\JWTManager as JWT;
 
 class UserController extends Controller {
-    
+
+        
     public function register(Request $request){
         $validator = Validator::make($request->json()->all(), [
             'name' => 'required|string|max:255',
